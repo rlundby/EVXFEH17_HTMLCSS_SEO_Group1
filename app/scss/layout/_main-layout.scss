@@ -1,0 +1,9 @@
+.main-layout {
+   @include respond-to('wide') { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: em(10);
+    background-color: white;
+    @include page-bg('http://miriadna.com/desctopwalls/images/max/Square-in-autumn.jpg');
+   }
+}

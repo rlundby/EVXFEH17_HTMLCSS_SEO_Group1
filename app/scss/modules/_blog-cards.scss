@@ -1,0 +1,21 @@
+.blog-cards {
+    @include respond-to('wide') {
+        grid-column: 1/4;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+    .article {
+        width: em(400px);
+        height: em(400px);
+        margin: em(5px);
+        @include solidborder (2px, black);
+    }
+    @for $i from 1 through length($theme-colors) {
+        .article:nth-child(#{$i}) {
+            background: map-get($theme-colors, $i);
+            //(nth($theme-colors, $i), 20%);
+        }
+    }
+      
+}

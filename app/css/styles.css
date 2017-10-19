@@ -2,11 +2,6 @@
 /* HSL Main Color Scheme*/
 /* Color definement */
 /* Breakpoints*/
-.card img {
-  width: 100%;
-  height: auto;
-  display: block; }
-
 nav {
   position: absolute; }
   @media (min-width: 62em) {
@@ -68,7 +63,7 @@ nav {
   @media (min-width: 62em) {
     nav {
       width: 100%;
-      background: #384d48;
+      background: rgba(0, 0, 0, 0.541);
       font-size: 16px;
       box-shadow: 0 0 10px black;
       transform: translateX(0%); }
@@ -127,8 +122,7 @@ nav {
             padding: 15px 25px;
             color: white; }
           nav > ul > li:hover {
-            background: rgba(128, 128, 128, 0.384);
-            border-radius: 30px; }
+            background: rgba(128, 128, 128, 0.384); }
       nav a {
         display: block;
         color: #fff;
@@ -156,7 +150,7 @@ nav {
 /* Slideshow container */
 .featured {
   display: none;
-  margin-top: 60px; }
+  margin-top: 3.75em; }
   @media (min-width: 48em) {
     .featured {
       display: block; } }
@@ -165,13 +159,22 @@ nav {
       display: block; } }
   @media (min-width: 75em) {
     .featured {
-      display: block; } }
+      background-color: rgba(128, 128, 128, 0.507);
+      display: block;
+      grid-column: 2/4;
+      grid-row: span 2;
+      border: 2px solid black; }
+      .featured .slideshow-container .prev, .featured .slideshow-container .next {
+        display: none; } }
 
 .slideshow-container {
   max-width: 1000px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: auto; }
+  @media (min-width: 75em) {
+    .slideshow-container {
+      margin: 20px; } }
 
 .mySlides {
   display: none;
@@ -214,13 +217,13 @@ nav {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #838181;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease; }
 
 .active, .dot:hover {
-  background-color: #717171; }
+  background-color: #e2e2e2; }
 
 /* Fading animation */
 .fade {
@@ -241,229 +244,60 @@ nav {
   to {
     opacity: 1; } }
 
-.bg-coral {
-  background-color: #F45D4C; }
-  .bg-coral:before {
-    content: "$color-coral"; }
-  .bg-coral:after {
-    content: "#F45D4C"; }
+.test-news {
+  background-color: red; }
+  @media (min-width: 75em) {
+    .test-news {
+      grid-column: 1;
+      grid-row: 1/3;
+      margin-top: 0.625em;
+      border: 2px solid black; } }
 
-.coral {
-  color: #F45D4C; }
-  .coral:after {
-    content: " $color-coral";
-    display: inline; }
-
-.bg-orange {
-  background-color: #F7A541; }
-  .bg-orange:before {
-    content: "$color-orange"; }
-  .bg-orange:after {
-    content: "#F7A541"; }
-
-.orange {
-  color: #F7A541; }
-  .orange:after {
-    content: " $color-orange";
-    display: inline; }
-
-.bg-yellow {
-  background-color: #FACA66; }
-  .bg-yellow:before {
-    content: "$color-yellow"; }
-  .bg-yellow:after {
-    content: "#FACA66"; }
-
-.yellow {
-  color: #FACA66; }
-  .yellow:after {
-    content: " $color-yellow";
-    display: inline; }
-
-.bg-green {
-  background-color: #A1DBB2; }
-  .bg-green:before {
-    content: "$color-green"; }
-  .bg-green:after {
-    content: "#A1DBB2"; }
-
-.green {
-  color: #A1DBB2; }
-  .green:after {
-    content: " $color-green";
-    display: inline; }
-
-.bg-teal {
-  background-color: #60B99A; }
-  .bg-teal:before {
-    content: "$color-teal"; }
-  .bg-teal:after {
-    content: "#60B99A"; }
-
-.teal {
-  color: #60B99A; }
-  .teal:after {
-    content: " $color-teal";
-    display: inline; }
-
-.bg-blue {
-  background-color: #54787D; }
-  .bg-blue:before {
-    content: "$color-blue"; }
-  .bg-blue:after {
-    content: "#54787D"; }
-
-.blue {
-  color: #54787D; }
-  .blue:after {
-    content: " $color-blue";
-    display: inline; }
-
-.bg-purple {
-  background-color: #5B527F; }
-  .bg-purple:before {
-    content: "$color-purple"; }
-  .bg-purple:after {
-    content: "#5B527F"; }
-
-.purple {
-  color: #5B527F; }
-  .purple:after {
-    content: " $color-purple";
-    display: inline; }
-
-.bg-gray {
-  background-color: #555555; }
-  .bg-gray:before {
-    content: "$color-gray"; }
-  .bg-gray:after {
-    content: "#555555"; }
-
-.gray {
-  color: #555555; }
-  .gray:after {
-    content: " $color-gray";
-    display: inline; }
-
-.bg-black {
-  background-color: #000000; }
-  .bg-black:before {
-    content: "$color-black"; }
-  .bg-black:after {
-    content: "#000000"; }
-
-.black {
-  color: #000000; }
-  .black:after {
-    content: " $color-black";
-    display: inline; }
-
-.color-cards {
-  color: #fff;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  background: #333;
-  margin: 0 auto; }
-
-.colors {
-  display: flex;
-  margin: 3rem auto;
-  overflow: hidden;
-  text-align: center;
-  align-items: center; }
-  @media (min-width: 30em) {
-    .colors {
-      flex-direction: column; } }
-  @media (min-width: 62em) {
-    .colors {
-      flex-direction: row; } }
-
-.colors div[class^='bg'],
-.colors div[class*=' bg'] {
-  height: 200px;
-  position: relative;
-  width: 100%; }
-  @media (min-width: 48em) {
-    .colors div[class^='bg'],
-    .colors div[class*=' bg'] {
-      width: 33.33%; } }
-  @media (min-width: 62em) {
-    .colors div[class^='bg'],
-    .colors div[class*=' bg'] {
-      width: 11.11%; } }
-  .colors div[class^='bg']:before, .colors div[class^='bg']:after,
-  .colors div[class*=' bg']:before,
-  .colors div[class*=' bg']:after {
-    background: rgba(0, 0, 0, 0.4);
-    display: block;
-    line-height: 1.75;
-    position: absolute;
-    width: 100%; }
-  .colors div[class^='bg']:before,
-  .colors div[class*=' bg']:before {
-    bottom: 28px; }
-  .colors div[class^='bg']:after,
-  .colors div[class*=' bg']:after {
-    bottom: 0; }
-
-.card {
-  display: grid;
-  grid-template-rows: 1fr; }
-
-.card .caption {
-  grid-row: 1; }
-
-.card-item {
-  padding-bottom: 0px; }
-
-/* Two Column tablet layout */
-@media screen and (min-width: 27em) {
-  /* Styling for the grid-cards. Implementing grid on them */
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
-    margin: 0; }
-  .card-item {
-    margin-top: 5px;
-    padding-bottom: 0; } }
-
-@media screen and (min-width: 60em) {
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-flow: dense; }
-  .card-item {
-    filter: saturate(0%); }
-  .card-item:hover {
-    filter: saturate(100%); }
-  .card-item:hover h3 {
-    color: orange; }
-  .card h3 {
-    font-size: 16px;
-    text-align: center; }
-  .card {
-    margin: 2px; }
-  .card-item:nth-of-type(1) {
-    grid-column: 1/3; }
-  .card-item:nth-of-type(3) {
-    grid-column: 4/6;
-    grid-row: 3/4; }
-  .card-item:nth-of-type(4) {
+@media (min-width: 75em) {
+  .blog-cards {
     grid-column: 1/4;
-    grid-row: 2/4; }
-  .card-item:nth-of-type(5) {
-    grid-column: 3/6;
-    grid-row: 1/2; }
-  .card-item:nth-of-type(7) {
-    grid-row: 4/5;
-    grid-column: 4/6; }
-  .card-item:nth-of-type(8) {
-    grid-row: 4/5;
-    grid-column: 1/4; }
-  .card-item:nth-of-type(9) {
-    grid-column: 1/6;
-    grid-row: 5/6; } }
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center; } }
+
+.blog-cards .article {
+  width: 25em;
+  height: 25em;
+  margin: 0.3125em;
+  border: 2px solid black; }
+
+.blog-cards .article:nth-child(1) {
+  background: #F45D4C; }
+
+.blog-cards .article:nth-child(2) {
+  background: #F7A541; }
+
+.blog-cards .article:nth-child(3) {
+  background: #FACA66; }
+
+.blog-cards .article:nth-child(4) {
+  background: #A1DBB2; }
+
+.blog-cards .article:nth-child(5) {
+  background: #60B99A; }
+
+.blog-cards .article:nth-child(6) {
+  background: #54787D; }
+
+.blog-cards .article:nth-child(7) {
+  background: #5B527F; }
+
+.blog-cards .article:nth-child(8) {
+  background: #555555; }
+
+.blog-cards .article:nth-child(9) {
+  background: #000000; }
+
+@media (min-width: 75em) {
+  .footer {
+    grid-column: 1/4;
+    height: 6.25em;
+    background-color: rgba(0, 0, 0, 0.555); } }
 
 * {
   box-sizing: border-box; }
@@ -477,3 +311,14 @@ a {
 
 li {
   list-style: none; }
+
+@media (min-width: 75em) {
+  .main-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.625em;
+    background-color: white;
+    background-image: url("http://miriadna.com/desctopwalls/images/max/Square-in-autumn.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; } }

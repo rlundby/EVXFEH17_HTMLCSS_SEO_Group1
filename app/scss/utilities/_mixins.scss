@@ -39,28 +39,36 @@
       background: radial-gradient(ellipse at center, $start-color, $end-color);
     }
 }
-
 // Mixin for Reponsive Background //
-
-@mixin page-bg ($imagepath, $bgrepeat: no-repeat, $bg-attachment: fixed) {
- color: map-get ($color: primarycolor);
- background: map-get ($color: mainred);
- background-image: url ($imagepath);
- background-repeat: $bgrepeat;
- background-attachment: $bg-attachment;
- background-size: $bg-size;
+///Mixin for page background
+/// @param {url} $imagepath - set the url of the page-bg
+@mixin page-bg($imagepath,$bgrepeat:no-repeat,$bgattachment:fixed,$bgsize:cover) {
+    background-image: url($imagepath);
+    background-repeat: $bgrepeat;
+		background-attachment:$bgattachment;
+		background-size:$bgsize;
 }
-
 // Solid border //
 @mixin solidborder ($size, $color,$solid: solid ){
     border: $size $solid $color;
 }
-
 // Media Query //
 @mixin respond-to($breakpoint) {
+
+
  
     @media #{inspect(map-get($breakpoints, $breakpoint))} {
       @content;
     }
   }
 
+
+
+
+ // @for $i from 1 through length($theme-colors) {
+ //   .article:nth-child(#{$i}) {
+ //     background: map-get($theme-colors, $i);
+//      //(nth($theme-colors, $i), 20%);
+//    }
+//  }
+    
