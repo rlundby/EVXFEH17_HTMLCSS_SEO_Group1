@@ -33,13 +33,13 @@ $color-black: #000000;
 
 // Turn them into a color map
     $theme-colors: (
-    coral: $color-coral,
-    orange: $color-orange,
-    yellow: $color-yellow,
-    green: $color-green,
-    teal: $color-teal,
-    blue: $color-blue,
-    purple: $color-purple,
-    gray: $color-gray,
-    black: $color-black
+    1: $color-coral,
+    2: $color-orange,
+    3: $color-yellow,
+    4: $color-green,
+    5: $color-teal,
+    6: $color-blue,
+    7: $color-purple,
+    8: $color-gray,
+    9: $color-black
   );

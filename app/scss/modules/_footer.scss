@@ -1,0 +1,7 @@
+.footer {
+    @include respond-to('wide') {
+    grid-column: 1/4;
+    height: em(100px);
+    background-color: rgba(0, 0, 0, 0.555);
+    }
+}
