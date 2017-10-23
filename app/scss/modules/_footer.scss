@@ -1,7 +1,109 @@
 .footer {
+    border-top: 3px solid rgb(0, 0, 0);
+    display: grid;
+    background-color: rgba(36, 24, 3, 0.74);
+    font-family: 'Roboto Condensed', sans-serif;
+    @include respond-to('small') {
+        justify-content: center;
+    }
+    @include respond-to('medium') {
+        background-color: rgba(77, 40, 6, 0.404);
+        grid-template-columns: 1fr 1fr;  
+    }
     @include respond-to('wide') {
-    grid-column: 1/4;
-    height: em(100px);
-    background-color: rgba(0, 0, 0, 0.555);
+        height: em(280px);
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-column: 1/4;
+        grid-row: 5;
+        
+    }
+}
+
+.footer-img {
+    display: none;
+    @include respond-to('wide') {
+        display: block;
+        grid-column: 1/4;
+        grid-row: 5;
+            img {
+            width: 300px;
+            height: auto;
+            margin-top: -50px;
+        }
+    }
+}
+
+.footer-social-rickard, .footer-social-joakim  {
+    display: flex;
+    flex-direction: column;
+    @include respond-to('medium') {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    @include respond-to('wide') { 
+        grid-column: 3;
+        grid-row: 1/3;
+        }
+        h4 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 5px;
+            margin-left: 25px;
+        }
+        i {
+            padding: 5px;
+            color: white;
+            font-size: 20px;
+            margin-left: 85px;
+        }
+}
+.footer-social-joakim {
+    @include respond-to('medium') {
+    grid-column: 2;
+    grid-row: 1;
+    }
+    @include respond-to('wide') { 
+        grid-column: 4;
+        grid-row: 1/3;
+    }
+}
+.show {
+    background: rgba(255, 255, 255, 0.466);
+    width: 230px;
+    text-align: center;
+}
+.footer-text {
+    @include respond-to ('medium') {
+        grid-column: 1/3;
+        grid-row: 1;
+        z-index: -1;
+         h1 {
+             opacity: 0;
+         }
+         .footer-images {
+             margin-left: 200px;
+         }
+    }
+    @include respond-to ('wide') {
+        grid-column: 2;
+        z-index: 0;
+        .footer-images {
+            margin-left: 0px;
+        }
+    }
+
+    h1 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    }
+    .ursa {
+        position: absolute;
+        width: auto;
+        height: 200px;
+    }
+    .kunkis {
+        width: 140px;
+        height: auto;
     }
 }

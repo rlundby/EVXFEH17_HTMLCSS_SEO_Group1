@@ -6,24 +6,42 @@
     @include respond-to('medium')
     {
       display: block;
+        .text {
+          display: none;
+        }
+        .prev, .next {
+          display: none;
+        }
+      
     }
     @include respond-to('large')
     {
       display: block;
+      background-color: rgba(248, 168, 56, 0.2);
+      @include solidborder(2px, black);
+      margin: 10px;
+      .slideshow-container {
+        .prev, .next {
+          color: white;
+          display: block;
+          text-shadow:
+          -1px -1px 0 #000,  
+           1px -1px 0 #000,
+           -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+      }
     }
     @include respond-to('wide')
     {
-      @include background-gradient(rgba(0, 0, 0, 0.699), rgba(248, 168, 56, 0.74), vertical);
+      width: auto;
+      max-width: 900px;
       display: block;
       grid-column: 2/4;
       grid-row: span 2;
-      @include solidborder(2px, black);
-        .slideshow-container {
-          .prev, .next {
-            display: none;
-          }
-        }
+      margin: 0;
     }
+    
 }
 
 .slideshow-container {
@@ -39,6 +57,11 @@
   .mySlides {
       display: none;
       grid-column: 1/3;
+      img {
+        width: 850px;
+        height: 350px;
+        @include solidborder (2px, black);  
+      }
   }
   
   /* Next & previous buttons */
@@ -51,7 +74,6 @@
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    margin-left: 450px;
     
   }
   
@@ -61,16 +83,26 @@
     justify-content: flex-end;
     margin-left: 0px;
   }
+  .prev {
+    margin-left: 350px;
+  }
   
   
   /* Caption text */
   .text {
-    color: #4b0303;
+    color: #e4d9d9;
     font-size: 18px;
     padding: 8px 12px;
     bottom: 8px;
-    width: 100%;
+    width: 850px;
     text-align: center;
+    background-color: rgba(128, 128, 128, 0.76);
+    @include solidborder (2px, black);  
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
   }
   
   /* Number text (1/3 etc) */
@@ -88,6 +120,7 @@
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+    @include solidborder (1px, black);  
   }
   
   .active, .dot:hover {
