@@ -5,5 +5,8 @@
     grid-gap: em(10);
     background-color: white;
     @include page-bg('https://i.imgur.com/Y0RLlqp.jpggulp');
+
+    p, h1, h2, a{font-family: $main-font;
+    }
    }
 }
