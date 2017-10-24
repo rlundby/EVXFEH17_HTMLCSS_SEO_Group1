@@ -1,21 +1,58 @@
 .blog-cards {
+    color:rgb(192, 192, 192);
+
     @include respond-to('wide') {
         grid-column: 1/4;
         display: flex;
         flex-flow: wrap;
         justify-content: center;
     }
+
     .article {
-        width: em(400px);
+        display:grid;
+        grid-template-rows: 1fr 6fr 1fr;
+
+        width: 100%;
         height: em(400px);
         margin: em(5px);
+
         @include solidborder (2px, black);
-    }
-    @for $i from 1 through length($theme-colors) {
-        .article:nth-child(#{$i}) {
-            background: map-get($theme-colors, $i);
-            //(nth($theme-colors, $i), 20%);
+        
+        .article-header, .article-footer{
+            background-color:rgba(0, 0, 0, 0.508);
         }
+
+        .article-header{
+            display:grid;
+            grid-template-columns: 2fr 1fr;
+
+            .fa, .article-like{
+                text-align: right;
+                padding-right:50px;
+            }
+            .fa{
+                padding-right:80px;
+                font-size: 25px;
+            }
+        }
+
+        .article-footer{
+            font-size: 10px;
+        }
+        .article-content{
+            background-color: black;
+        }
+        .article-content img{
+            width:100%;
+            max-height:210px;
+            margin-top:10%      /*dålig lösning, centrera bättre*/
+        }
+
+        @include respond-to('medium') {
+            width: em(400px);
+        }
+
     }
+
       
 }
