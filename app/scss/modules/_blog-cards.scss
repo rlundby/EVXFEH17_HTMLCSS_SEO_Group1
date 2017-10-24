@@ -1,8 +1,10 @@
 .blog-cards {
     color:rgb(192, 192, 192);
-    @include respond-to('tablet') {
-        grid-column: span 2;  
-    }
+    
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    
 
     @include respond-to('wide') {
         grid-column: 1/4;
@@ -14,7 +16,6 @@
     .article {
         display:grid;
         grid-template-rows: 1fr 6fr 1fr;
-
         width: 100%;
         height: em(400px);
         margin: em(5px);
