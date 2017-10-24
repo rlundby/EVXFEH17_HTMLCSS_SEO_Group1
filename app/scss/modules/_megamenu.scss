@@ -1,14 +1,15 @@
+header {
+   
+}
+
 .nav-banner {
     display: flex;
     flex-direction: column;
-
+    z-index: 2;
     position: fixed;
-
     width:100%;
-
     font-family: ‘Roboto Condensed’, sans-serif;
     color:white;
-
     text-shadow:
     -1px -1px 0 #000,  
     1px -1px 0 #000,
@@ -18,7 +19,7 @@
 
     .menu-label{
         z-index: 3;
-
+        cursor: pointer;
         height: 100px;
         padding-top:40px;
 
@@ -45,6 +46,9 @@
         transition: all 1.5s;
 
         border:black 4px solid;
+         a {
+            color: white;
+         }
         h2{
             padding-bottom:20px;
         }
@@ -80,5 +84,5 @@
 
 #checkbox-id:checked +#wrapper nav ul{
     top:0;
-    transition-duration: 1.5s;
+    transition-duration: 0.5s;
 }
