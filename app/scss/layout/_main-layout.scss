@@ -1,10 +1,11 @@
 .main-layout {
-   @include respond-to('wide') { 
+    @include page-bg('https://i.imgur.com/Y0RLlqp.jpggulp');
+    @include respond-to('wide') { 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: em(10);
     background-color: white;
-    @include page-bg('https://i.imgur.com/Y0RLlqp.jpggulp');
+    grid-gap: em(10);
+    
 
     p, h1, h2, a{font-family: $main-font;
     }
@@ -12,5 +13,6 @@
 }
 .space-holder {
     height: 100px;
+    background-color: black;
 
 }
