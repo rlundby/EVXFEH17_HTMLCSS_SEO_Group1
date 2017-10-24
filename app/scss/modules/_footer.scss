@@ -1,3 +1,4 @@
+/* Footer Styling */
 .footer {
     border-top: 3px solid rgb(0, 0, 0);
     display: grid;
@@ -18,7 +19,7 @@
         
     }
 }
-
+/* Styling of the footer-icon */
 .footer-img {
     display: none;
     @include respond-to('wide') {
@@ -32,7 +33,7 @@
         }
     }
 }
-
+/* Styling of the contact element, text and images*/
 .footer-social-rickard, .footer-social-joakim  {
     display: flex;
     flex-direction: column;
