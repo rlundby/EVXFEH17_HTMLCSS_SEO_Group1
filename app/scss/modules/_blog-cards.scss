@@ -14,8 +14,9 @@
     }
 
     .article {
-        display:grid;
+        display:grid;   
         grid-template-rows: 1fr 6fr 1fr;
+        grid-template-areas: "header" "content" "footer";
         width: 100%;
         height: em(400px);
         margin: em(5px);
@@ -27,6 +28,7 @@
         }
 
         .article-header{
+            grid-area: "header";
             display:grid;
             grid-template-columns: 2fr 1fr;
 
@@ -42,13 +44,14 @@
         }
 
         .article-footer{
-
+            grid-area: "footer";
             font-size: 14px;
             @include respond-to('wide') {
             font-size: 10px;
             }
         }
         .article-content{
+            grid-area: "contetnt";
             background-color: rgba(0, 0, 0, 0.842);
             display: flex;
             align-items: center;
